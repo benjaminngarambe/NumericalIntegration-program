@@ -18,19 +18,19 @@ namespace NumericalIntegration_program
             {
                 double a, b;
                 double[] boundaries;
-                Console.WriteLine("Integral calculator \n 1.Write coefficients of polynomial function\n2. Write polynomial function\nEnter your choice:");
+                Console.WriteLine("Integral calculator \n1.Write coefficients of polynomial function\n2.Write polynomial function\nEnter your choice:");
                 var Choice = int.Parse(Console.ReadLine());
                 switch (Choice)
                 {
                     case 1:
                         Console.Clear();
-                        Console.Write("Please write the coefficients of polynomial function:");
+                        Console.Write("Please write the coefficients of polynomial function:\n");
                         string coefficientInput = Console.ReadLine();
                         if (string.IsNullOrWhiteSpace(coefficientInput)) throw new FormatException();
 
                         string[] spltCoefficient = coefficientInput.Split(' ');
 
-                        List<int> coefficients = new List<int>(); //1 2 3 -4
+                        List<int> coefficients = new List<int>();
                         for (int i = 0; i < spltCoefficient.Length; i++)
                         {
                             coefficients.Add(int.Parse(spltCoefficient[i]));

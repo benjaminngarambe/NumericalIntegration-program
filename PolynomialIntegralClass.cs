@@ -21,8 +21,7 @@ namespace NumericalIntegration_program
         public void DisplayFunction()
         {
             int exponential = PolynomialCoefficients.Count - 1;
-            Console.WriteLine("The function you've entered:\n");
-
+            Console.WriteLine("The function you've entered:");
             string polynomialFunction = $"f(x) = {PolynomialCoefficients[0]}x^{exponential}";
             exponential--;
             for (int i = 1; i < sizeFunc - 1; i++)
